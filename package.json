@@ -1,0 +1,30 @@
+{
+	"name": "chr00tkitt-discord-bot",
+	"version": "1.0.0",
+	"description": "no",
+	"main": "node server.js",
+	"scripts": {
+	  "start": "node server.js"
+		},
+	"dependencies": {
+		"sqlite": "^4.0.23",
+		"sqlite3": "^5.0.2",
+		"express": "^4.17.1",
+		"discord.js": "^13.4.0",
+		"@discordjs/builders": "^0.9.0",
+		"@discordjs/rest": "^0.1.1-canary.0",
+		"dotenv": "^10.0.0",
+		"request": "^2.88.2"
+	},
+	"engines": {
+	  "node": "17.x"
+	},
+	"license": "MPL",
+	"keywords": [
+		"discord.js",
+		"node",
+		"automod",
+		"bot"
+	]
+  }
+  

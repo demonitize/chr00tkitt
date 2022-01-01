@@ -1,0 +1,13 @@
+{
+	"debug":false,
+	"build":"Dev",
+	"prefix":"&",
+	"globalAdmin":[
+		"414602371621060629",
+		"388027786939596800"
+	],
+	"automodIgnoredUsers":[
+	  
+	],
+	"bannedWords": "nully|fag|nigg|shea"
+  }
