@@ -399,6 +399,6 @@ app.post("/api/verify", (req, res) => {
 	});
 });
 
-app.listen(80)
+app.listen(8080)
 
 client.login(process.env.CHEESE);
