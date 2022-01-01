@@ -399,4 +399,6 @@ app.post("/api/verify", (req, res) => {
 	});
 });
 
+app.listen(80)
+
 client.login(process.env.CHEESE);
