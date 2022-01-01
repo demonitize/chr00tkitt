@@ -5,6 +5,8 @@ const {
 } = require("discord.js");
 require("dotenv").config();
 const request = require("request");
+const express = require("express");
+const app = express();
 const client = new Client({
 	intents: [
 		Intents.FLAGS.GUILDS,
@@ -383,5 +385,19 @@ function cmdCreate() {
 	//   });
 	// });
 }
+
+app.use(express.static("public"));
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+app.post("/api/verify", (req, res) => {
+	request.post({url:"https://discord.com/api/oauth2/token", form: {client_id:'576945188186882049',client_secret:process.env.CLIENT_SECRET, grant_type:"authorization_code",code:req.query.code, redirect_uri:"https://chr00tkitt.herokuapp.com/api/verify"}}, function (error, response, body) {
+		if (error) console.warn(new Error(error));
+		// console.log(response);
+		console.log(body);
+	});
+});
 
 client.login(process.env.CHEESE);
